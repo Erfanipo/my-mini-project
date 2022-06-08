@@ -1,0 +1,155 @@
+@import url(../reset/reset.css);
+
+body {
+    line-height: 1.6;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    /* text-transform: uppercase; */
+}
+
+.one-half {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    transition: width 500ms;
+}
+
+.one-half h1 {
+    color: #efefef;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    cursor: default;
+    white-space: nowrap;
+    transition: font-size 450ms;
+}
+
+.one-half h1::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    background-color: #fff;
+    width: 0;
+    height: 3.5px;
+    transition: width 400ms;
+}
+
+.one-half a {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #efefef;
+    border: 1px solid #eee;
+    padding: 12px 23px;
+    cursor: pointer;
+} 
+
+.one-half a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ececec;
+    transition: height 300ms;
+}
+
+.one-half a:hover::before {
+    height: 6px;
+}
+
+.left {
+    background: bottom url(../images/row-fashionable-clothing-hangers_1232-3003.webp) no-repeat;
+    background-size: cover;
+}
+
+.left::before,.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    transition: background-color 500ms;
+}
+
+.right {
+    background: bottom url(../images/collection-plain-yellow-sweaters-jackets-women-hanging-rack-dressing-room-selective-focus-fashionable-winter-autumn-clothes_273609-32733.webp) no-repeat;
+    background-size: cover;
+}
+
+.right::before {
+    background-color: rgba(130, 136, 0, 0.5);
+}
+
+
+
+/* ? add class left-is-hoverd styles section */
+
+.left-is-hoverd .left {
+    width: 85%;
+}
+
+.left-is-hoverd .left h1 {
+    font-size: 3.2rem;
+}
+
+.left-is-hoverd .right {
+    width: 15%;
+} 
+
+.left-is-hoverd .right h1 {
+    font-size: 1.8rem;
+}
+
+.left-is-hoverd .left h1::before {
+    width: 100%;
+}
+
+.left-is-hoverd .left::before {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.left-is-hoverd .right::before {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+
+/* ? add class right-is-hoverd styles section */
+
+.right-is-hoverd .right {
+    width: 85%;
+}
+
+.right-is-hoverd .right h1 {
+    font-size: 3.2rem;
+}
+
+.right-is-hoverd .left {
+    width: 15%;
+}
+
+.right-is-hoverd .left h1 {
+    font-size: 2rem;
+}
+
+.right-is-hoverd .right h1::before {
+    width: 100%;
+}
+
+.right-is-hoverd .right::before {
+    background-color: rgba(130, 136, 0, 0.2);
+}
+
+.right-is-hoverd .left::before {
+    background-color: rgba(0, 0, 0, .8);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="img-gallery">
+        <img src="../images/a1.jpg" alt="">
+    </div>
+    <ul class="thumbnails">
+        <li><a href="../images/a1.jpg"><img src="../images/a1.jpg" alt=""></a></li>
+        <li><a href="../images/a10.jpg"><img src="../images/a10.jpg" alt=""></a></li>
+        <li><a href="../images/a3.jpg"><img src="../images/a3.jpg" alt=""></a></li>
+        <li><a href="../images/a4.jpg"><img src="../images/a4.jpg" alt=""></a></li>
+        <li><a href="../images/a17.jpg"><img src="../images/a17.jpg" alt=""></a></li>
+    </ul>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.thumbnails a').click(function (e) { 
+                e.preventDefault();
+                $('.img-gallery img').attr('src',$(this).attr('href'));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+@import "../reset/reset.css";
+body{
+    background-color: #009688;
+    color: #fff;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.loop-container{
+    width: 600px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+
+.mountain{
+    position: absolute;
+    bottom: -.7rem;
+    right: -900px;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+    0 0 0 50px #4db6ac,
+    60px 50px 0 70px #4db6ac,
+    90px 90px 0 50px #4db6ac,
+    250px 250px 0 50px #4db6ac,
+    290px 320px 0 50px #4db6ac,
+    320px 400px 0 50px #4db6ac;
+    transform: rotate(130deg);
+    animation: mountain 20s linear infinite;
+}
+
+.hill{
+    position: absolute;
+    height: 20px;
+    width: 400px;
+    border-radius: 50%;
+    right: -900px;
+    bottom: -50px;
+    box-shadow: 
+    0 0 0 50px #4db6ac,
+    -20px 0 0 20px #4db6ac,
+    -90px 0 0 50px #4db6ac,
+    250px 0 0 50px #4db6ac,
+    290px 0 0 50px #4db6ac,
+    620px 0 0 50px #4db6ac;
+    animation: hill 4s 2s linear infinite;
+}
+
+.tree{
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 2.5rem;
+    border-top: 12px solid transparent;
+    border-right: 60px solid #fff;
+    border-bottom: 12px solid transparent;
+    /* transform: rotate(90deg); */
+    border-radius: 3px;
+    animation: tree 3s 0.000s linear infinite;
+}
+.tree:nth-child(2){
+    /* transform: rotate(90deg); */
+    animation: tree2 3s 0.15s linear infinite;
+}
+.tree:nth-child(3){
+    /* transform: rotate(90deg); */
+    animation: tree3 3s 0.05s linear infinite;
+}
+.tree::before{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 58px;
+    background-color: #fff;
+    width: 2rem;
+    height: 3px;
+    /* transform: rotate(90deg); */
+}
+
+.rock{
+    position: absolute;
+    margin-top: -17%;
+    bottom: -2px;
+    width: 7px;
+    height: 7px;
+    border-radius: 40%;
+    background-color: #ddd;
+    animation: rock 4s -0.530s linear infinite;
+}
+
+/* .truck{
+    animation: truck 4s 0.080s ease infinite;
+} */
+
+.truck i{
+    font-size: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 15rem;
+    animation: truck 2.8s ease infinite;
+    transition: all ease;
+}
+.truck::before{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 2.5px;
+    border-radius: 5px;
+    box-shadow: 12.5rem 13.1rem 0 0 #fff,
+    13rem 13.7rem 0 0 #fff;
+    animation: wind 1.5s 0.000s ease infinite;
+}
+
+/* keyfarmes styles */
+
+@keyframes tree {
+    0%{
+        transform: translateX(1350px) rotate(90deg);
+    }
+    100%{
+        transform: translateX(-50px) rotate(90deg);
+    }
+}
+
+@keyframes tree2 {
+    0%{
+        transform: translateX(650px) rotate(90deg);
+    }
+    100%{
+        transform: translateX(-50px) rotate(90deg);
+    }
+}
+
+@keyframes tree3 {
+    0%{
+        transform: translateX(2000px) rotate(90deg);
+    }
+    100%{
+        transform: translateX(-50px) rotate(90deg);
+    }
+}
+
+@keyframes rock {
+    0%{
+        transform: translateX(2750px);
+    }
+    100%{
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes wind {
+    /* 0%{transform: translateY(5px);} */
+    50%{transform: translateY(3px);}
+}
+
+@keyframes truck {
+    6%{transform: translateY(0);}
+    7%{transform: translateY(-6px);}
+    8%{transform: translateY(0);}
+    9%{transform: translateY(6px);}
+    10%{transform: translateY(-1px);}
+    11%{transform: translateY(0);}
+}
+
+@keyframes mountain {
+    100%{transform: translateX(-2000px) rotate(130deg);}
+}
+
+@keyframes hill{
+    100%{
+        transform: translateX(-2000px);
+    }
+}

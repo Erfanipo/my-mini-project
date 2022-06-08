@@ -1,0 +1,70 @@
+@import url(../reset/reset.css);
+body{
+
+    background-color: #8a2be2;
+
+}
+.navbar {
+    background-color: #00ffff;
+    border-radius: .6rem;
+    margin: 2rem;
+    box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, .2);
+    position: relative;
+}
+.navbar .navbar-nav{
+    display: flex;
+    padding: 1rem 0 1rem 2rem;
+}
+.navbar .navbar-nav .navbar-item{
+    margin-inline: 1.2rem;
+    z-index: 999;
+}
+.navbar .navbar-nav .home{
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    /* border-bottom: 3px solid #0000ff; */
+    background: linear-gradient(#ff2800, #ff2800) no-repeat right;
+    background-size: 0 100%;
+    transition: background-size 500ms;
+    z-index: 100;
+}
+.navbar .navbar-nav .navbar-item:nth-child(2):hover ~ .home{
+    left: 118px;
+    width: 50px;
+    /* border-color: #ff0000; */
+    background-size: 100% 100%;
+    background-position: left;
+}
+.navbar .navbar-nav .navbar-item:nth-child(3):hover ~ .home{
+    left: 180px;
+    width: 87px;
+    /* border-color: #008000; */
+    background-size: 100% 100%;
+    background-position: left;
+}
+.navbar .navbar-nav .navbar-item:nth-child(4):hover ~ .home{
+    left: 280px;
+    width: 80px;
+    /* border-color: #5f9ea0; */
+    background-size: 100% 100%;
+    background-position: left;
+}
+.navbar .navbar-nav .navbar-item:nth-child(5):hover ~ .home{
+    left: 380px;
+    width: 70px;
+    /* border-color: #000; */
+    background-size: 100% 100%;
+    background-position: left;
+}
+.navbar .navbar-nav .navbar-item:nth-child(6):hover ~ .home{
+    left: 450px;
+    width: 70px;
+    /* border-color: #98a42b; */
+    background-size: 100% 100%;
+    background-position: left;
+}
+
+p{
+    /* background: linear-gradient(#); */
+}

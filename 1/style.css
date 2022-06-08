@@ -1,0 +1,93 @@
+@import url(../reset/reset.css);
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../images/modern-living-room-style.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: baseline;
+}
+.navbar span {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  color: #fff;
+  margin: 20px;
+  position: relative;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.navbar ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.text-boxlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-boxlay h1{
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.text-boxlay p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #adaaaa;
+    margin-bottom: 20px;
+}
+.btn{
+    display: flex;
+    justify-content: center ;
+}
+.btn button{
+    background-color: transparent;
+    color: #fff;
+    margin: 20px;
+    border: 1px solid #efefef;
+    padding: 10px 65px;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.btn span{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #4f626d;
+    border-radius: 25px;
+    z-index: -1;
+    transition: .5s ease;
+}
+button:hover span{
+    width: 100%;
+}
+.btn button:hover{
+    border: 1px solid #4f626d;
+}

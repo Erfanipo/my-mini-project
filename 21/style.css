@@ -1,0 +1,70 @@
+@import url(../reset/reset.css);
+
+body {
+    background-color: #efefef;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    direction: rtl;
+}
+
+.wrapper {
+
+}
+
+.toast {
+    box-shadow: 0 0 .4rem rgba(0, 0, 0, 0.314);
+    position: relative;
+    border-right: 4px solid #00b400;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-block: 1rem;
+    padding: 20px 60px 20px 25px;
+    width: 430px;
+    display: grid;
+    align-items: center;
+}
+.toast::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 1.5rem;
+    background-color: #00b400;
+    border-radius: 50%;
+}
+
+.toast:nth-child(2) {
+    border-right: 4px solid #3075ff;
+}
+.toast:nth-child(2)::before {
+    background-color: #3075ff;
+}
+
+.toast:nth-child(3) {
+    border-right: 4px solid #def015;
+}
+.toast:nth-child(3)::before {
+    background-color: #def015;
+}
+
+.toast h4 {
+    color: rgb(39, 39, 39);
+    margin-block: .5rem;
+    font-size: 14px;
+}
+
+.toast p {
+    color: rgb(103, 103, 103);
+    font-size: 13px;
+}
+
+.toast .close {
+    color: rgb(121, 121, 121);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 1.3rem;   
+    font-size: 1.3rem;
+    cursor: pointer;
+}

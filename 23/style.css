@@ -1,0 +1,157 @@
+@import url(../reset/reset.css);
+
+body {
+    background-color: #f1f1f1;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.blog-card {
+    width: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25) ;
+}
+
+.blog-card .meta {
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.blog-card .meta .photo {
+    background: url(../images/top-view-unrecognizable-hacker-performing-cyberattack-night_1098-18706.webp) no-repeat ;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 170px;
+    transition: opacity 350ms, transform 350ms;
+    cursor: pointer;
+}
+
+.blog-card .meta:hover .photo {
+    opacity: .65;
+    transform: scale(1.2) rotate(3deg);
+}
+
+.blog-card .meta .details {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #f1f1f1;
+    line-height: 1.9;
+    font-size: 15px;
+    display: none;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.blog-card .meta:hover .details {
+    display: block;
+    opacity: 1;
+}
+
+.blog-card .meta .details .author i {
+    padding-left: 7px;
+} 
+
+.blog-card .meta .details .tags a{
+    color: #efefef;
+    padding: 0 0 0 4px;
+}
+
+
+/* ? start description styles section of blog card */
+
+.blog-card .desc {
+    padding: 10px;
+    position: relative;
+}
+
+.blog-card .desc h1 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-block: .3rem 2px;
+}
+
+.blog-card .desc h4 {
+    color: rgb(105, 105, 105);
+    font-size: 13.5px;
+    margin-block: 0 .6rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.blog-card .desc h4::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 5px;
+    background-color: rgb(222, 114, 47);
+    border-radius: 10px;
+    bottom: -3px;
+    z-index: -1;
+}
+
+.blog-card .desc p {
+    font-size: 13px;
+    color: rgb(58, 58, 58);
+    margin-block: .5rem 2rem;
+    line-height: 1.7;
+}
+
+.blog-card .desc .read-more {
+    position: absolute;
+    color: #fff;
+    background-color: blue;
+    bottom: 0;
+    left: 0;
+    padding: 7px 12px;
+    border-radius: 0 3px 0 0;
+    font-size: 15px;
+}
+
+
+/* ? start media qeury styles section of blog card */
+
+@media (min-width: 650px) {
+    .blog-card {
+        display: flex;
+        max-width: 700px;
+        height: 200px;
+    }
+
+    .blog-card .meta {
+        height: auto;
+        flex-basis: 70%;
+        transition: 380ms;
+    }
+
+    .blog-card .meta:hover {
+        flex-basis: 140%;
+    }
+
+    .blog-card .meta .photo {
+        height: 100%;
+    }
+
+    .blog-card .desc {
+        flex-basis: 200%;
+        transition: 400ms;
+        /* position: relative; */
+    }
+
+    .blog-card .desc::before {
+        content: '';
+        position: absolute;
+        width: 26px;
+        background-color: #fff;
+        top: 0;
+        right: -20px;
+        bottom: 0;
+        transform: skew(-3deg);
+    }
+}

@@ -1,0 +1,98 @@
+@import "../reset/reset.css";
+
+:root {
+    --bg-crl: #c9c9c9;
+    --border-crl: #444040;
+    --border2-color: #2222ff;
+    --btn-crl: #109010;
+}
+
+body {
+    background-color: var(--bg-crl);
+    line-height: 1.6;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1.5px solid var(--border-crl);
+    border-left-color: var(--border2-color);
+    border-radius: 50%;
+    animation: circle 1000ms infinite linear;   
+}
+
+@keyframes circle {
+    0% {transform: rotate(0);}
+    100%{transform: rotate(365deg);}
+}
+
+/* * styles tick */
+
+.tick {
+    position: relative;
+    display: none;
+}
+
+.tick::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 110px;
+    /* border: 2px solid red; */
+    border-right: 2px solid green;
+    border-bottom: 2px solid green;
+    transform: rotate(45deg);
+    transform-origin: left bottom;
+    bottom: -100px;
+    left: 50px;
+    opacity: 0;
+    animation: tick 1000ms forwards;
+}
+
+@keyframes tick {
+    0% {
+        opacity: 1;
+        width: 0;
+        height: 0;
+    }
+    22% {
+        opacity: 1;
+        width: 45px;
+        height: 0;
+    }
+    44% {
+        opacity: 1;
+        width: 45px;
+        height: 100px;
+    }
+    100% {
+        opacity: 1;
+        width: 45px;
+        height: 100px;
+    }
+}
+
+/* ******** the off class */
+
+.off {
+    animation: none;
+    border-color: green;
+    transition: border-color .5s ease;
+}
+
+/* * styles button  */
+
+button {
+    all: unset;
+    background-color: var(--btn-crl);
+    color: #fff;
+    border-radius: 3px;
+    padding: 7px 19px;
+}

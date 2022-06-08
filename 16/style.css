@@ -1,0 +1,62 @@
+@import url(../reset/reset.css);
+
+body {
+    background: linear-gradient(to bottom right, #494949 0%, #545454 50%, #494949 100%) no-repeat;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper > * {
+    background-color: azure;
+    margin: 30px;
+    padding: 15px 25px;
+    position: relative;
+    transform: rotate(-30deg) skew(20deg);
+    font-size: 2rem;
+    box-shadow: -20px 20px 7px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.wrapper div::before,.wrapper div::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 17.5px;
+    left: -18px;
+    top: 9px;
+    background-color: rgb(193, 193, 193);
+    transform: skewY(-44deg);
+    transition: .5s;
+}
+
+.wrapper div::after {
+    content: '';
+    position: absolute;
+    height: 17px;
+    width: 100%;
+    left: -8.5px;
+    top: 66.17px;
+    background-color: rgb(193, 193, 193);
+    transform: skewX(314deg);
+}
+
+.wrapper div:hover {
+    background-color: blueviolet;
+    color: #fff;
+    transform: rotate(-30deg) skew(20deg) translate(20px, -15px);
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, .5);
+}
+.wrapper div:hover::before {
+    background-color: rgb(150, 69, 226);    
+} 
+
+.wrapper div:hover::after {
+    background-color: rgb(161, 89, 228);    
+} 

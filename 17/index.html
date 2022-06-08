@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+    <!-- * header section -->
+    <header>
+        <div class="img-header">
+                <h1>Terry's Taco Joint</h1>
+            
+                <p>Pretty good Tacos</p>
+        </div>
+        <div class="card1">
+            <p>$1.99</p>
+            <p>Tacos</p>
+        </div>
+        <div class="card2">
+            <p>$3.99</p>
+            <p>Kombucha</p>
+        </div>
+    </header>
+
+
+    <!-- * menu section -->
+    <nav class="nav">
+
+        <a href="javascript:" class="menu"><i class="fa-solid fa-xmark"></i><i class="fa-solid fa-bars bar"></i> Menu</a>
+
+        <ul>
+            <li>Tacos</li>
+            <li>Beers</li>
+            <li>Wines</li>
+            <li>Dessert</li>
+            <li>Reservations</li>
+        </ul>
+    </nav>
+
+
+    <!-- * category section -->
+    <section class="category">
+            <div class="category-item">
+                <div class="category-title">🌮</div>
+                <h4>Tacos</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptas nesciunt a corrupti cum.</p>
+            </div>
+            <div class="category-item">
+                <div class="category-title">🍺</div>
+                <h4>Beer</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptas nesciunt a corrupti cum.</p>
+            </div>
+            <div class="category-item">
+                <div class="category-title">🍷</div>
+                <h4>Wine</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptas nesciunt a corrupti cum.</p>
+            </div>
+            <div class="category-item">
+                <div class="category-title">🎵</div>
+                <h4>Music</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptas nesciunt a corrupti cum.</p>
+            </div>
+    </section>
+
+
+    <!-- * poster section -->
+    <div class="poster">
+        <img src="../images/tortilla_144627-20838.webp" alt="">
+        <div class="right">
+        <h2>Featured Taco</h2>
+        <p>Slime Profile, easy to hoid and loaded with cheese.</p>
+        <p>This is the one you have been waiting for</p>
+        <a href="#">Learn More <span><i class="fa-solid fa-right-long"></i></span></a>
+    </div>
+    </div>
+
+
+    <!-- * gallery section -->
+    <section class="gallery">
+
+        <h2>Instant Grams</h2>
+
+        <img src="../images/vegetables-set-left-black-slate_1220-685.webp" alt="">
+        <img src="../images/top-view-circular-food-frame_23-2148723455.jpg" alt="">
+        <img src="../images/spices-black-background-space-text_169016-3118.jpg" alt="">
+        <img src="../images/front-view-delicious-meat-hamburger-with-red-tomatoes-dark-background_179666-19342.webp" alt="">
+        <img src="../images/assorted-indian-recipes-food-various_79295-7226.webp" alt="">
+        <img src="../images/colorful-tasty-hummus-with-ingredients_23-2149401948.jpg" alt="">
+        <img src="../images/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.webp" alt="">
+        <img src="../images/doodles-background-bakery_125540-632.jpg" alt="">
+        <img src="../images/supermarket-banner-concept-with-ingredients_23-2149421144.jpg" alt="">
+        <img src="../images/indian-condiments-with-copy-space-view_23-2148723492.jpg" alt="">
+        <img src="../images/vegetables-set-left-black-slate_1220-685.webp" alt="">
+        <img src="../images/top-view-circular-food-frame_23-2148723455.jpg" alt="">
+        <img src="../images/assorted-indian-recipes-food-various_79295-7226.webp" alt="">
+        <img src="../images/colorful-tasty-hummus-with-ingredients_23-2149401948.jpg" alt="">
+        <img src="../images/spices-black-background-space-text_169016-3118.jpg" alt="">
+        <img src="../images/supermarket-banner-concept-with-ingredients_23-2149421144.jpg" alt="">
+        <img src="../images/front-view-delicious-meat-hamburger-with-red-tomatoes-dark-background_179666-19342.webp" alt="">
+        <img src="../images/assorted-indian-recipes-food-various_79295-7226.webp" alt="">
+    </section>
+
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(function () {
+          $('.menu').click(function () { 
+              $('.nav ul').toggleClass('slide');
+              $('.menu .bar').toggleClass('none');
+          });
+      });
+  </script>
+</body>
+</html>

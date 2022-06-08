@@ -1,0 +1,140 @@
+@import url(../reset/reset.css);
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    background-color: darkgrey;
+    font-weight: 500;
+    direction: rtl;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 300px;
+    max-height: 300px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.297);
+    transition: 500ms;
+}
+
+.header {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: .4s ease;
+    z-index: 10;
+}
+
+.header .mounth {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 7px 10px;
+    background-color: #3987fc;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.1;
+    z-index: 11;
+}
+
+.header .period {
+    position: absolute;
+    background-color: #3987fc;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    padding: 5px 9px;
+}
+
+.body {
+    position: relative;
+    background-color: #fff;
+    padding: 10px 15px;
+    line-height: 1.8;
+    height: 100px;
+}
+
+.body .title {
+    font-size: 1.3rem;
+}
+
+.body .part a {
+    color: #3860ff;
+}
+
+.body .description {
+    position: absolute;
+    top: 3.5rem;
+    margin-top: 1rem;
+    opacity: 0;
+    font-size: 13.5px;
+    color: #3c3c3c;
+    transition: 500ms;
+    transform: translateY(15px);
+}
+
+.footer {
+    display: flex;
+    background-color: #fff;
+    padding-block: 1rem .5rem;
+    padding-inline: 15px;
+}
+
+.footer div {
+    margin-inline: .3rem;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* * hover */
+
+.container:hover .header {
+    height: 80px!important;
+    transition: 500ms;
+}
+
+.container:hover .header img {
+    transform: scale(1.5);
+    transition: 500ms ease;
+    object-fit: cover;
+}
+
+.container:hover .header::before {
+    opacity: 1;
+    transition: height 500ms; 
+}
+
+.container:hover .body {
+    /* transform: translateY(-50px); */
+    transform-origin: top;
+    transition:all 500ms;
+    height: 200px;
+    /* padding-bottom: 30px; */
+
+}
+
+.container:hover .body .description {
+    opacity: 1;
+    transform: translateY(10px);
+}

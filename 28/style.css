@@ -1,0 +1,38 @@
+@import url(../reset/reset.css);
+
+body {
+    background: #3f4d4c;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    line-height: 1.6;
+    font-size: 1.6em;
+}
+
+ul {
+    perspective: 600px;
+    transform: rotateY(50deg);
+}
+
+li {
+    background-color: #505050;
+    position: relative;
+    padding: 10px 30px;
+}
+
+li:last-child {
+    box-shadow: 0 60px 35px rgba(0, 0, 0, .30);
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 45px;
+    perspective: 500px;
+    transform: rotateX(-50deg) skew(-10deg);
+    background-color: #404040;
+    left: -3rem;
+
+}

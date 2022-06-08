@@ -1,0 +1,52 @@
+@import url(../reset/reset.css);
+
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+    font-weight: 500;
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .collapse-panel {
+    background-color: rgb(137, 143, 255);
+    position: relative;
+    width: 100%;
+    border: 1px solid #88cdff;  
+}
+
+.wrapper .collapse-panel .header {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.wrapper .collapse-panel .icon {
+    position: absolute; 
+    left: .8rem;
+    top: 8.6px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 250ms;
+}
+
+.wrapper .description {
+    display: none;
+    background-color: #fff;
+    color: #222;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    top: -.2rem;
+}

@@ -1,0 +1,82 @@
+@import "../reset/reset.css";
+:root{
+    --txt-color: #fff;
+    --bg-label: #f33c3c;
+    --bg-subMenu: #273057;
+    --bg-lenier: #394c7f;
+    --line: 2;
+    --font-weight: 500;
+}
+body{
+    color: var(--txt-color);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    line-height: var(--line);
+}
+.container{
+    width: 16rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container input[type="radio"]{
+    display: none;
+}
+.container label{
+    background-color: var(--bg-label);
+    font-size: 1.1rem;
+    display: block;
+    border-bottom: 1px solid #c34848;
+    position: relative;
+    cursor: pointer;
+    line-height: 3;
+    transition: .4s ease;
+}
+.container label .subMenu{
+    height: 0;
+    transition: .4s ease-in-out;
+}
+.container label .subMenu li{
+    background-color: var(--bg-subMenu);
+    border-top: 1px solid #a5a2a2;
+    padding: 0 20px;
+    font-size: .95rem;
+    position: relative;
+}
+.container label .subMenu li:hover{
+    background: linear-gradient(to bottom ,var(--bg-subMenu) 0%,var(--bg-subMenu) 50%,var(--bg-lenier) 51%,var(--bg-lenier) 100%);
+}
+.container label .subMenu li::before,
+.container label .subMenu li::after{
+    content: '';
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+.container label .subMenu li:hover::before,
+.container label .subMenu li:hover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-left: 11px solid #fff;
+    border-bottom: 24px solid transparent;
+    opacity: 1;
+}
+.container label .subMenu li:hover::after{
+    border-left: 0;
+    border-right: 11px solid #fff;
+    right: 0;
+}
+.container input:nth-child(1):checked ~ label #subMenu-1{
+    height: 140px;
+}
+.container input:nth-child(3):checked ~ label #subMenu-2{
+    height: 90px;
+}
+.container input:nth-child(5):checked ~ label #subMenu-3{
+    height: 140px;
+}

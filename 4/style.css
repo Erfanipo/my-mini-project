@@ -1,0 +1,65 @@
+:root{
+    --bg-color: #ecf0f3;
+    --typewriter-color: #282626;
+    --typewriter-speed: 6s;
+}
+body{
+    background-color: var(--bg-color);
+    
+}
+.txtwriter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    text-align: center;
+}
+.txtwriter h1.title{
+    font-size: clamp(1.3rem,1vw + 1rem,3rem);
+    font-family: monospace;
+    position: relative;
+}
+.txtwriter h1.title::after,
+.txtwriter h1.title::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.txtwriter h1.title::before{
+    background-color: var(--bg-color);
+    animation: typewriter var(--typewriter-speed) steps(24) forwards;
+}
+.txtwriter h1.title::after{
+    width: .125em;
+    background-color: var(--typewriter-color);
+    animation: typewriter var(--typewriter-speed) steps(24) forwards,
+    blink 600ms steps(24) infinite;
+}
+@keyframes typewriter{
+    to{
+        left: 100%;
+    }
+}
+@keyframes blink{
+    to{
+        background-color: transparent;
+    }
+}
+.txtwriter p.sub-title{
+    font-size: clamp(1rem,1vw + .5rem,1.5rem);
+    font-family: sans-serif;
+    margin-block: 2rem 0;
+    opacity: 0;
+    transform: translateY(2.5rem);
+    animation: fadeInUp 2s ease var(--typewriter-speed) forwards;
+}
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
